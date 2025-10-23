@@ -1,0 +1,8 @@
+ErrorDocument 403 /index.cgi
+ErrorDocument 404 /index.cgi
+ErrorDocument 500 /index.cgi
+AddHandler application/x-httpd-php .cgi
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !/js/
+RewriteCond %{REQUEST_URI} !/css/
+RewriteRule / index.cgi

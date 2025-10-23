@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>汎用的電子掲示板「delight」</title>
+<link href="//www.rentalbbs.net/static/a.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!-- 
+body{
+  background-attachment:fixed;
+  background: url("g1.gif");
+}
+A:HOVER{
+  top:1px;
+}
+-->
+</style>
+</head>
+<body>
+<h3>汎用的電子掲示板「delight」</h3>
+<dt>「delight」とは何ですか？</dt>
+<dd>delightは、サーバーさえあれば誰でも設置することができる多機能かつシンプルなスレッドフロート型兼伝言板型の汎用的な電子掲示板スクリプトです。(電子掲示板だけでなくブログ・マイクロブログ・日記、メモ帳代わり等にも使うことができます)<br>
+ソースはWTFPLで公開されています。<br>
+利用者は投稿する前にアカウントを登録する必要はありませんが、自動スパムを防止するため投稿前確認画面での同意(認証)が必要です。<br>
+２ちゃんねる専用ブラウザ(2ch型のスレッドフロート型掲示板を閲覧・投稿するためのクライアントソフトウェア)は外部板対応のものであれば基本的に対応しています。<br>
+スレッドフロート型掲示板:最新の投稿がなされたスレッドがその掲示板のスレッド群の最上位に表示される機能を持つ電子掲示板。delightではスレッド及びスレッド一覧が該当。<br>
+伝言板型掲示板:駅の伝言版に書き込むような使い方ができる簡単なもの。書き込まれたメッセージは、新しい順に連続して表示される。delightでTL(タイムライン)が該当。<br>
+※/test/admin.phpよりログイン -> 掲示板設定 -> 基本設定 -> キャップユーザーのみスレッド作成を許可にチェックを入れ反映することでスレッドを実質的に無効化することは可能です
+</dd>
+ダウンロード：<br>
+　　<b>
+ver 2.0910.1700
+　　</b><br>
+　　<a href="https://delight.rentalbbs.net/v2.zip">v2.zip</a>
+　　<pre style="white-space: pre-wrap">前バージョンからの変更内容：
+Client
+・TL上で投稿No.での返信先を表示できるように
+Server
+・投稿No.を旧メール欄に表示するように
+・TL上でも投稿No.を使って返信ができるようになりました
+</pre>
+<dl>
+<dt>LICENSE：</dt>
+<dd>WTFPL applies, unless a separate license is listed in the source code.</dd>
+<dd>ソースコード内に別のライセンスが記載されているファイルを除き、WTFPLが適用されます。</dd>
+<dt>設置方法：</dt>
+<dd>v2.zipを解凍後、v2ディレクトリ内の全てのディレクトリやファイルを設置<br>
+設置後/test/create.phpにアクセスして板を作成<br>
+作成後/test/admin.phpにアクセスしてログイン・板設定変更<br>
+※利用者に勝手に掲示板を作成されないようにするには/test/createcode.cgiに板作成パスワードを入れてください
+</dd>
+<br>
+<dt>注意事項：</dt>
+<dd>・PHP 7.4 - PHP 8.2で動作確認済<br>
+・設置先のサーバでmbstringが有効化されている必要があります<br>
+・認証機能を使用するにはreCAPTCHAへの登録、画像アップロード機能を使用するにはImgur APIへの登録が必要です</dd>
+<br>
+<dt>2ch型のスレッドフロート型掲示板共通の機能：</dt>
+<dd>スレッド、age/sage、トリップ(10桁・12桁)、専用ブラウザ、ID、ID末尾、回線別ニックネーム表示など</dd><br>
+<dt>delight独自の機能：</dt>
+<dd>TL、認証システム、地域名表示、本文の装飾、アイコン機能など</dd><br>
+<dt>その他仕様：</dt>
+<dd>
+・メール欄は表示されません(不可視化)。代わりにID末尾等の情報が表示されます<br>
+・Web版が大幅に拡張されています(後述)<br>
+・掲示板の設定で過去ログを残すか消去するか選択可能<br>
+</dd><br>
+<dt>認証システムとは：</dt>
+<dd>
+・スパムや荒らしの対策のため投稿を行うにはreCAPTCHAを用いた認証を行い、鍵を発行する必要があります<br>
+細かな仕様はこちら -> <a href="https://w.atwiki.jp/3chjp/pages/36.html">ClientID(同意鍵)システム(v2) [delight-wiki]</a>
+</dd><br>
+<dt>TL(タイムライン)とは：</dt>
+<dd>
+・掲示板に投稿されたレスを最新順に並べたものです ※専ブラ版TLは古い順<br>
+・TLのみに投稿することもできます(TL限定投稿). Web版、専ブラ版共にTLの投稿欄から投稿してください<br>
+・TLには過去ログはありません. TL限定投稿はTLの保持数を超えた時点で閲覧できなくなります<br>
+・「sage」での投稿はTLに反映されません<br>
+・専ブラ版TLでは1番目にローカルルール、2番目に告知欄が表示されています<br>
+</dd><br>
+<dt>IDについて：</dt>
+<dd>
+IDが変わるまでの時間は掲示板毎の設定で変更できます ※コマンド機能が有効の掲示板ではスレッド毎にも変更できます<br>
+IDの生成仕様は<a href="https://info.5ch.net/index.php/BBS_SLIP#KOROKORO">5ch.net/bbspink.comのKOROKORO</a>と似た仕様ですが一部異なる部分があります<br>
+生成仕様の詳細は以下の通りです：<br>
+自演防止のためZを除き認証時の情報を使用してIDを生成<br>
+認証時の回線が固定回線(末尾0): 1234ABCDZ<br>
+認証時の回線が固定回線(末尾0)以外: S234ABCDZ<br>
+1,2 -> IP第一オクテット<br>
+3,4 -> プロバイダ名<br>
+A,B -> UserAgent<br>
+C,D -> ブラウザのヘッダ等情報<br>
+S -> 回線別末尾(a,d,Mなど)<br>
+Z -> 投稿時のIPアドレス
+ID、ID末尾、回線別ニックネーム等の細かな仕様はこちら -> <a href="https://w.atwiki.jp/3chjp/pages/37.html">BBS_SLIP(v2) [delight-wiki]</a>
+※掲示板設定やコマンドによりレス情報欄に投稿時のKOROKOROを表示させることも可能
+</dd><br>
+<dt>Web版について：</dt>
+<dd>
+・Webブラウザで掲示板のTL、スレ一覧、履歴、未読のいずれかのページで「ホーム画面に追加」「ショートカットを作成」などを行うとWebアプリ風に使えます<br>
+・ダークモードが使用可能 ※初期設定では端末のテーマに自動で合わせます<br>
+・ID、ワード、タイトルのミュート(NG)機能を使用可能(一部を除き正規表現も使用可)<br>
+・履歴、未読表示に対応(掲示板毎・過去ログは不可)<br>
+・スレッド検索、スレ内検索が可能(正規表現使用可)<br>
+・返信機能、レスやURLなどのコピー、次スレッド作成、ID抽出など<br>
+</dd><br>
+<dt>コマンド機能・スレッド主機能について</dt>
+<dd>
+コマンド機能とスレッド主機能はそれぞれ掲示板の設定で有効になっている場合は使用できます<br>
+細かな仕様はこちら -> <a href="https://w.atwiki.jp/3chjp/pages/35.html">コマンド一覧(v2) [delight-wiki]</a>
+</dd><br>
+<dt>本文の装飾について</dt>
+<dd><img src="https://i.imgur.com/03xhAxo.png" style="max-width:100%"></dd><br>
+<dt>Fediverseについて</dt>
+<dd>delightは、将来的にFediverseをサポートする予定です。Fediverseは、サードパーティが運営するさまざまなサーバーが構成するソーシャルネットワークです。サーバー間は互いに接続されており、相互に通信可能ですが、Fediverse上の各サーバーは独立して稼働しています。delightでは、ActivityPubプロトコルを使用し、ActivityPubプロトコルに対応している他のサーバー間との通信が可能となる予定です。
+delightでは、他のFediverseプラットフォーム上の利用者がdelightを使用した掲示板へ(一部制限はありますが)参加できるようにしたいと考えています。他のサーバーの利用者は、delightではIDの後にサーバー名が表示されます。
+</body>
+</html>	
