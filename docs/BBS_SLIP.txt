@@ -1,0 +1,73 @@
+※独自のwiki形式
+*概要
+&bold(){BBS_SLIP}は、[[SETTING.TXT]]での設定可能項目のひとつであり、
+ID末尾 や 名前欄内 での、 端末や回線の種別など の表示方式を指定するものです。
+
+参考：[[BBS_SLIPの仕様の変更と表示例＆BBS_DISP_IPとBBS_DISP_UAについて>https://www2.3chan.jp/info/20221212.html]]
+
+**&bold(){IDの表示}
+|設定|ID|
+|BBS_NO_ID=checked|ID を非表示|
+|BBS_FORCE_ID=checked|ID を強制表示|
+|上記のどちらも設定されていない|メール欄が空(あるいはsage,soko)なら ID を表示し空でなければ ID を非表示|
+-ID を表示する設定でも、 ★ については、現在の仕様では&bold(){ID:CAP_USER}&br()旧仕様では&bold(){ID:???}
+-ID末尾 は表示されるけれども、 ID 自体は非表示、という設定になっている板もあります。
+
+*板設定とは異なる表示方式にするコマンド
+**レス単位での指定
+レスの名前欄・メール欄に入力するコマンドを使うと、板設定とは違う表示をそのレスについてさせることもできます。
+|名前欄コマンド|表示|備考|
+|!id:none|BBS_NO_ID=checked 相当|BBS_FORCE_ID=checked の板・スレでは、使用不可|
+|!id:on|BBS_FORCE_ID=checked 相当||
+|!slip|BBS_SLIP=vvvvv 相当||
+
+**スレ単位での指定
+スレッド作成者が、本文欄１行目に、!extend: コマンド を書くことにより、そのスレに適用する表示方式を指定できます。
+>!extend:第１指定値:第２指定値:第３指定値:
+***!extend: でのID表示指定
+
+|第１指定値|表示|
+|default|板設定どおり|
+|none|ID を非表示|
+|checked|ID を強制表示|
+
+***!extend: でのSLIP表示指定
+|第２指定値|表示|備考|
+|default|板設定どおり||
+|none|BBS_SLIP= (none)相当||
+|checked|BBS_SLIP=checked 相当|ID末尾9桁|
+|verbose|BBS_SLIP=verbose 相当|ID詳細末尾10桁|
+|vvv|BBS_SLIP=vvv 相当|識別ID(自演防止)|
+|vvvv|BBS_SLIP=vvvv 相当|IP|
+|vvvvv|BBS_SLIP=vvvvv 相当|KOROKORO(ﾜｯﾁｮｲ)|
+|vvvvvv|BBS_SLIP=vvvvvv 相当|IP+KOROKORO|
+
+vvvvおよびvvvvvvは>>1-20 までのレスでしか、使用できないようです。
+
+第３指定値は、そのスレッドの上限レス数を(300-2000の間で)指定します。
+
+***!jien でのSLIP表示指定
+BBS_FORCE_ID=checked 相当(ID強制表示)
+BBS_SLIP=vvv 相当(識別ID表示)
+になります。
+
+*ID末尾表示 と 名前欄内ニックネーム表示
+&color(gray){準備中}
+
+*KOROKORO
+ISP やブラウザーについての情報によるらしい名前欄内表示であり、
+BBS_SLIP=vvvvv など で、 (名前欄内ニックネーム表示 などとともに)表示されます。
+KOROKORO は10日毎に変化するようです。
+
+>(ｽﾌﾟｰ Sdf8-65XU)
+>(ﾜｯﾁｮｲ 79ff-KXJ2)
+など
+
+*識別ID
+ISP やブラウザーについての情報によるらしい名前欄内表示であり、
+BBS_SLIP=vvvでのモバイル回線 など で、 (名前欄内ニックネーム表示 などとともに)表示されます。
+こちらは KOROKOROと異なり 日替わりのようです。
+
+>(ｽﾌﾟｰ Sd-fde30253186a1da0)
+>(JP 01-fde30253186a1da0)
+など

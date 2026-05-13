@@ -1,0 +1,69 @@
+<html lang="ja" dir="ltr"><head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=oZ57VlYl" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://www2.3chan.jp/info/20221212.html","20230117095939","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1673949579");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BBS_SLIPの仕様の変更と表示例＆BBS_DISP_IPとBBS_DISP_UAについて</title>
+</head>
+<body>
+<div style="font-size:18px;font-weight:bold;">BBS_SLIPの仕様の変更と表示例＆BBS_DISP_IPとBBS_DISP_UAについて</div>
+<small style="color:#536471">Dec 12, 2022</small><hr><div style="font-size:15px;">ID末尾表示が0または1のばあい、接続元IPアドレスを省略するように変更します<br><div style="font-weight:bold">BBS_SLIPの設定による名前欄表示例(一部)
+<table border="3" bgcolor="#F5F5F5" width="910" cellpadding="2">
+<tbody><tr bgcolor="#D0D0D0">
+	<td>ID末尾/BBS_SLIP設定</td>
+	<td>vvv</td><td>vvvv</td><td>vvvvv</td><td>vvvvvv</td></tr>
+<tr>
+	<td>0</td>
+<td>(ﾜｯﾁｮｲ)</td><td>(ﾜｯﾁｮｲ 58.138.*)</td><td>(ﾜｯﾁｮｲ bf7c-UuAj)</td><td>(ﾜｯﾁｮｲ bf7c-UuAj [58.138.*])</td></tr>
+<tr>
+	<td>1</td>
+<td>(ﾜｯﾁｮｲ)</td><td>(ﾜｯﾁｮｲ 2400:2200.*)</td><td>(ﾜｯﾁｮｲ abcd-UuAj)</td><td>(ﾜｯﾁｮｲ abcd-UuAj [2400:2200.*])</td></tr><tr>
+	<td>8</td>
+<td>(ﾜｯﾁｮｲ)</td><td>(ﾜｯﾁｮｲ 175.177.44.198)</td><td>(ﾜｯﾁｮｲ 6fe0-YW3r)</td><td>(ﾜｯﾁｮｲ 6fe0-YW3r [175.177.44.198])</td></tr><tr>
+	<td>H</td>
+<td>(JP)</td><td>(JP 69.169.18.37)</td><td>(JP 0H7e-gl31)</td><td>(JP 0H7e-gl31 [69.169.18.37])</td></tr><tr>
+	<td>d</td>
+<td>(ｽｯﾌﾟ)</td><td>(ｽｯﾌﾟ 1.75.153.134)</td><td>(ｽｯﾌﾟ Sdfa-9Mib)</td><td>(ｽｯﾌﾟ Sdfa-9Mib [1.75.153.134])</td></tr><tr>
+	<td>a</td>
+<td>(ｱｳｱｳｳｰ)</td><td>(ｱｳｱｳｳｰ 106.130.70.142)</td><td>(ｱｳｱｳｳｰ Sab7-DoRO)</td><td>(ｱｳｱｳｳｰ Sab7-DoRO [106.130.70.142])</td></tr><tr>
+	<td>p</td>
+<td>(ｻｻｸｯﾃﾛﾙ)</td><td>(ｻｻｸｯﾃﾛﾙ 126.233.214.8)</td><td>(ｻｻｸｯﾃﾛﾙ Speb-Mqln)</td><td>(ｻｻｸｯﾃﾛﾙ Speb-Mqln [126.233.214.8])</td></tr><tr>
+	<td>r</td>
+<td>(ｵｯﾍﾟｹ)</td><td>(ｵｯﾍﾟｹ 126.204.250.0)</td><td>(ｵｯﾍﾟｹ Srf7-Pht0)</td><td>(ｵｯﾍﾟｹ Srf7-Pht0 [126.204.250.0])</td></tr><tr>
+	<td>S</td>
+<td>(ﾓﾊﾞｲﾙ1)</td><td>(ﾓﾊﾞｲﾙ1 58.138.56.47)</td><td>(ﾓﾊﾞｲﾙ1 SSab-Mqln)</td><td>(ﾓﾊﾞｲﾙ1 SSab-Mqln [58.138.56.47])</td></tr><tr>
+	<td>F</td>
+<td>(ﾜｲｰﾜ2)</td><td>(ﾜｲｰﾜ2 103.5.140.177)</td><td>(ﾜｲｰﾜ2 FF9f-usqJ)</td><td>(ﾜｲｰﾜ2 FF9f-usqJ [103.5.140.177])</td></tr><tr>
+	<td>M</td>
+<td>(ﾜﾝﾄﾝｷﾝ)</td><td>(ﾜﾝﾄﾝｷﾝ 153.236.253.95)</td><td>(ﾜﾝﾄﾝｷﾝ MM5f-Mqln)</td><td>(ﾜﾝﾄﾝｷﾝ MM5f-Mqln [153.236.253.95])</td></tr></tbody></table>
+</div><br>※全ての接続回線で接続元ホストを省略せず表示させる場合は<b>BBS_DISP_IP</b>をご利用ください<br><br><div style="font-size:17px;font-weight:bold">BBS_DISP_IPとBBS_DISP_UAについて</div>設定により接続元ホスト、IPアドレスの一部、使用ブラウザ名が(接続回線の種類にかかわらず)ID欄に表示されます<br>BBS_DISP_IP:checked -&gt; HOST:p5313203-ipngnfx01marunouchi.tokyo.ocn.ne.jp<br>BBS_DISP_IP:feature -&gt; IP:106.176.*<br>BBS_DISP_UA:checked -&gt; UA:JaneXeno
+<script>(function(){var js = "window['__CF$cv$params']={r:'78ae3d46cbe37ec9',m:'Wd7vZ3p_pVttCX8N6UgZPNtbGciZnHCBlrwLQIcD5MY-1673949579-0-AYL+oOkCBA43EFyb9CKV+gaCn6TKzQTy2ti19MyVLXKWZwLs2uXlO6S1NKLzRQ6nvrYMYSw/y5AE0FAcQLFuhRZ9ogQVM/DiQYU7Xa+FpekDzpL5I6r2pAPOC9j5BZP7pl0I+/DDFk/oCLZDSgb3u8s=',s:[0x3340173e5a,0x63e6288491],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body></html><!--
+     FILE ARCHIVED ON 09:59:39 Jan 17, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:02:02 May 13, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 1.775
+  exclusion.robots: 1.199
+  exclusion.robots.policy: 1.185
+  esindex: 0.01
+  cdx.remote: 6.542
+  LoadShardBlock: 94.542 (3)
+  PetaboxLoader3.datanode: 89.01 (4)
+  PetaboxLoader3.resolve: 1330.654 (2)
+  load_resource: 1350.776
+-->

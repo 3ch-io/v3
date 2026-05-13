@@ -1,0 +1,16 @@
+※独自wiki形式
+書き込みレス一覧は、3ちゃんねるの機能の一つ。
+
+*概要
+2022年12月~2023年1月ごろに追加された機能で、いわば3ちゃんねる版必死チェッカーである。
+なお、この機能は当日の書き込みしか表示する事が出来ないため、日付が変わってしまった場合は閲覧することが不可能になるため注意が必要。
+
+
+*関連リンク
+[[ID:2E63NP+p 書き込みレス一覧（表示例・魚拓）>https://archive.vn/bhHx0]]
+
+-------------------
+表示例(archive.todayから抽出した）：
+<div class="html1" style="position:relative;z-index:0;overflow-y:auto;overflow-x:auto;min-height:768.0px;text-align:initial;"><div class="html" style="overflow-x:visible;overflow-y:visible;"><div class="body" style="margin-bottom:8px;margin-left:8px;margin-right:8px;margin-top:8px;min-height:752px /*cni=13*/;overflow-x:visible;overflow-y:visible;display:block;">
+<h4 style="font-weight:700;display:block;margin-block-end:21.28px;margin-block-start:21.28px;margin-inline-end:0px;margin-inline-start:0px;">ID:2E63NP+p 書き込みレス一覧</h4>
+<dl style="display:block;margin-block-end:16px;margin-block-start:16px;margin-inline-end:0px;margin-inline-start:0px;"><dt style="display:block;"><a href="https://archive.vn/o/bhHx0/https://qb6.3chan.jp/test/read.cgi/jikken/1676906546/24" target="_blank" style="color:rgb(0, 0, 238);cursor:pointer;text-decoration-color:rgb(0, 0, 238);text-decoration-line:underline;text-decoration-style:solid;text-decoration-thickness:auto;">てす</a><br>24 ：<b style="font-weight:700;">名無しさん</b>(東京都)<b style="font-weight:700;"></b>[]：23/02/22(水) 17:21:35 ID:2E63NP+p01 UA:Chrome</dt><dd style="display:block;margin-inline-start:40px;"> ああああ <br></dd></dl><div height="1" width="1" style="display:inline-block;height:1px;vertical-align:bottom;width:1px;border-bottom-color:rgb(0, 0, 0);border-bottom-style:none;border-bottom-width:0px;border-image-outset:0;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-color:rgb(0, 0, 0);border-left-style:none;border-left-width:0px;border-right-color:rgb(0, 0, 0);border-right-style:none;border-right-width:0px;border-top-color:rgb(0, 0, 0);border-top-style:none;border-top-width:0px;left:0px;position:absolute;top:0px;visibility:hidden;"><div class="html1" style="position:relative;z-index:0;overflow-y:auto;overflow-x:auto;width:100%;height:100%;min-height:1.0px;text-align:initial;"><div class="html" style="overflow-x:visible;overflow-y:visible;"><div class="body" style="margin-bottom:8px;margin-left:8px;margin-right:8px;margin-top:8px;overflow-x:visible;overflow-y:visible;display:block;"></div></div></div></div></div></div></div>
