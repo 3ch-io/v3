@@ -76,6 +76,9 @@
 - `!extend:<ID表示>:<SLIP表示>:<最大レス数>`
 - `!jien`: ID強制表示 + 識別ID表示（自演防止モード）。
 - `!バルサン`: PHOEBEレベル2以下を排除。
+- `!SETTING:BBS_SLIP:feature`: 一般回線(末尾0)を含む全ての回線で名前欄に識別IDを表示する。
+- `!SETTING:BBS_RAWIP_CHECK:feature`: 認証済みしか書き込めないスレッドに変更する。
+- `!SETTING:BBS_PHOEBE:○○`: 指定したPHOEBEレベル以上しか書き込めないスレッドに変更する。
 
 ## 5. エラーメッセージと規制ロジック対応表
 
